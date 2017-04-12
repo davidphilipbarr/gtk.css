@@ -4,8 +4,9 @@ headerbar {
   min-height:36px;
 /*
   border-width: 0 0 1px;
-*/
+
   border-style: solid;
+*/
   background-image:none;
   box-shadow:none;
 }
@@ -27,8 +28,8 @@ window:not(.tiled):not(.maximized):not(.solid-csd) stack headerbar:first-child:b
   border-top-right-radius: 3px; }
 
 window.ssd headerbar.titlebar {
-    padding-top: 1px;
-    padding-bottom: 1px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     min-height: 0;
 }
 
