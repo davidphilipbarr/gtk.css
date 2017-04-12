@@ -1,0 +1,51 @@
+.titlebar:not(headerbar),
+headerbar {
+
+  min-height:36px;
+/*
+  border-width: 0 0 1px;
+*/
+  border-style: solid;
+  background-image:none;
+  box-shadow:none;
+}
+ 
+decoration {
+  border-radius: 3px 3px 0 0;
+ }
+
+.background:not(.tiled):not(.maximized):not(.solid-csd) .titlebar:backdrop, .background:not(.tiled):not(.maximized):not(.solid-csd) .titlebar {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px; }
+
+window:not(.tiled):not(.maximized):not(.solid-csd) separator:first-child + headerbar:backdrop, window:not(.tiled):not(.maximized):not(.solid-csd) separator:first-child + headerbar, window:not(.tiled):not(.maximized):not(.solid-csd) headerbar:first-child:backdrop, window:not(.tiled):not(.maximized):not(.solid-csd) headerbar:first-child {
+  border-top-left-radius: 3px; }
+window:not(.tiled):not(.maximized):not(.solid-csd) headerbar:last-child:backdrop, window:not(.tiled):not(.maximized):not(.solid-csd) headerbar:last-child {
+  border-top-right-radius: 3px; }
+window:not(.tiled):not(.maximized):not(.solid-csd) stack headerbar:first-child:backdrop, window:not(.tiled):not(.maximized):not(.solid-csd) stack headerbar:first-child, window:not(.tiled):not(.maximized):not(.solid-csd) stack headerbar:last-child:backdrop, window:not(.tiled):not(.maximized):not(.solid-csd) stack headerbar:last-child {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px; }
+
+window.ssd headerbar.titlebar {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    min-height: 0;
+}
+
+window.ssd headerbar.titlebar button.titlebutton {
+    padding-top: 3px;
+    padding-bottom:3px;
+    min-height: 0;
+}
+
+/*
+headerbar entry,
+headerbar spinbutton,
+headerbar button,
+headerbar separator {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+*/
+.undershoot.top, .undershoot.right, .undershoot.bottom, .undershoot.left { background-image: none; }
+
