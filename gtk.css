@@ -1,3 +1,6 @@
+.titlebar:not(headerbar) .title, headerbar .title { font-weight: normal; }
+
+
 .titlebar:not(headerbar),
 headerbar {
   min-height:0px;
@@ -5,20 +8,20 @@ headerbar {
 }
  
 decoration:not(.solid-csd) {
-  border-radius: 4px 4px 0 0;
+  border-radius: 0 0 0 0;
  }
 
 .background:not(.tiled):not(.maximized):not(.solid-csd) .titlebar:backdrop, .background:not(.tiled):not(.maximized):not(.solid-csd) .titlebar:not(.solid-csd) {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px; }
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px; }
 
 window:not(.tiled):not(.maximized):not(.solid-csd) separator:first-child + headerbar:backdrop, window:not(.tiled):not(.maximized):not(.solid-csd) separator:first-child + headerbar, window:not(.tiled):not(.maximized):not(.solid-csd) headerbar:first-child:backdrop, window:not(.tiled):not(.maximized):not(.solid-csd) headerbar:first-child {
-  border-top-left-radius: 4px; }
+  border-top-left-radius: 0px; }
 window:not(.tiled):not(.maximized):not(.solid-csd) headerbar:last-child:backdrop, window:not(.tiled):not(.maximized):not(.solid-csd) headerbar:last-child {
-  border-top-right-radius: 4px; }
+  border-top-right-radius: 0px; }
 window:not(.tiled):not(.maximized):not(.solid-csd) stack headerbar:first-child:backdrop, window:not(.tiled):not(.maximized):not(.solid-csd) stack headerbar:first-child, window:not(.tiled):not(.maximized):not(.solid-csd) stack headerbar:last-child:backdrop, window:not(.tiled):not(.maximized):not(.solid-csd) stack headerbar:last-child {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px; }
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px; }
 
 window.ssd headerbar.titlebar {
     padding-top: 1px;
@@ -28,8 +31,8 @@ window.ssd headerbar.titlebar {
 }
 
 window.ssd headerbar.titlebar button.titlebutton {
-    padding-top: 4px;
-    padding-bottom:4px;
+    padding-top: 3px;
+    padding-bottom:3px;
     min-height: 0;
 }
 
@@ -65,3 +68,54 @@ border-bottom: 0;
 border-top-right-radius: 0;
 border-top-left-radius: 0;
 }
+
+
+/* Path bar */
+
+.path-bar button {
+  background: none;
+  border: 0px solid transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.path-bar button:not(:first-child) {
+  border-left: 5px solid transparent;
+}
+
+.path-bar button:not(:last-child) {
+  border-right: 4px solid transparent;
+}
+
+.path-bar button:not(:first-child) {
+  background-image: image(mix(@theme_bg_color, @borders, 1.0));
+  background-size: 1px 12px;
+  background-repeat: no-repeat;
+  background-position: -5px 50%
+}
+
+.path-bar button:nth-child(2) {
+
+  background-size: 0;
+
+}
+
+.path-bar button:not(:first-child):backdrop {
+  background-image: image(mix(@theme_bg_color, @borders, 0.5));
+}
+
+.path-bar button:checked,
+.path-bar button:active {
+  box-shadow: inset 0 -2px 0 @theme_selected_bg_color;
+}
+
+.path-bar button:not(:checked):hover,
+.path-bar button:checked:backdrop {
+  box-shadow: inset 0 -2px 0 mix(@theme_bg_color, @borders, 0.5);
+}
+
+.path-bar button.slider-button:disabled {
+  color: mix(@theme_bg_color, @theme_fg_color, 0.2);
+opacity: 0
+}
+
