@@ -8,7 +8,7 @@ headerbar {
 }
  
 decoration:not(.solid-csd) {
-  border-radius: 0 0 0 0;
+  border-radius: 3px 3px 0 0;
  }
 
 .background:not(.tiled):not(.maximized):not(.solid-csd) .titlebar:backdrop, .background:not(.tiled):not(.maximized):not(.solid-csd) .titlebar:not(.solid-csd) {
@@ -49,11 +49,11 @@ opacity:0
 .sidebar {
   border-style: none;
 }
-
+/*
 decoration, window.ssd headerbar.titlebar {
   border-radius: 0px 0px 0 0;
 }
-
+*/
  .solid-csd decoration {
     padding: 2px;
 }
